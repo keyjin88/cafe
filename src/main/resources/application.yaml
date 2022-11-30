@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:55000/postgres
+    username: postgres
+    password: postgrespw
+  jpa:
+    open-in-view: off
+    hibernate:
+      ddl-auto: validate
+    show-sql: on
+    properties:
+      hibernate:
+        format_sql: true
+  liquibase:
+    change-log: db/changelog/db.changelog-master.xml
+server:
+  servlet:
+    context-path: /v1
+  port: 8080
+
+
+
